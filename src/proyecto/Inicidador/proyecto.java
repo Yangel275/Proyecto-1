@@ -2,19 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package proyecto.pkg1;
+package proyecto.Inicidador;
+
+import Interfaz.Entrada;
 
 /**
  *
  * @author yangel
  */
-public class Proyecto1 {
+public class proyecto {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Entrada ventana = new Entrada();
+        ventana.setVisible(true);
     }
     
 }
