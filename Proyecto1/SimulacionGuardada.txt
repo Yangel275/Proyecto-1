@@ -1,0 +1,3 @@
+Nombre: A
+Vertice: AB
+Distancia: 20
