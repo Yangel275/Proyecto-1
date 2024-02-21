@@ -5,7 +5,7 @@
 package Grafo;
 import org.graphstream.graph.*;
 import org.graphstream.graph.implementations.*;
-import igu.Inicio;
+
 /**
  *
  * @author Carl
