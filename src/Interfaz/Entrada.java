@@ -161,7 +161,7 @@ public class Entrada extends javax.swing.JFrame {
 
     private void Crear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Crear1ActionPerformed
         this.setVisible(false);
-        Crear_Gr ventana = new Crear_Gr();
+        Crear_Ciu ventana = new Crear_Ciu();
         ventana.setVisible(true);
     }//GEN-LAST:event_Crear1ActionPerformed
 
