@@ -19,35 +19,18 @@ public class Crear_Ciu extends javax.swing.JFrame {
         
         Advertencia.setVisible(false);
         
-        Seleccion_ciu_Cb.setVisible(false);
+        Agregar.setVisible(false);   
+        
+        Ciudad.setVisible(false);
+        Ciudad_lb.setVisible(false);
         
         Ciudad_Ad_Cb.setVisible(false);
-        Ciudad_lb.setVisible(false);
-        Ciudad.setVisible(false);
-        
+        Ciudad_ad.setVisible(false);
         Ciudad_ad_Título.setVisible(false);
         Ciudad_ad_lb.setVisible(false);
-        Ciudad_ad.setVisible(false);
         
-        Distancia_lb.setVisible(false);
         Distancia.setVisible(false);
-
-        Agregar.setVisible(false);
-        
-        
-    
-    
-     
-    
-    
-    
-    
-    
-    
-    
-     
-        
-        
+        Distancia_lb.setVisible(false);
     }
 
     /**
@@ -60,22 +43,18 @@ public class Crear_Ciu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        Continuar = new javax.swing.JButton();
-        Actualizar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         Ciudad_ad_lb = new javax.swing.JLabel();
         Distancia_lb = new javax.swing.JLabel();
         Ciudad_lb = new javax.swing.JLabel();
         Ciudad = new javax.swing.JLabel();
         Seleccion_ciu_Cb = new javax.swing.JComboBox<>();
-        Editar_ciu = new javax.swing.JButton();
-        Crear_ciu = new javax.swing.JButton();
         Ciudad_ad_Título = new javax.swing.JLabel();
         Ciudad_Ad_Cb = new javax.swing.JComboBox<>();
         Ciudad_ad = new javax.swing.JLabel();
         Distancia = new javax.swing.JLabel();
-        Agregar = new javax.swing.JButton();
-        Advertencia = new javax.swing.JLabel();
+        Actualizar = new javax.swing.JButton();
+        Continuar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -84,127 +63,105 @@ public class Crear_Ciu extends javax.swing.JFrame {
         jLabel1.setText("Crear ciudad o editar ciudades");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
 
-        Continuar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Continuar.setText("Continuar");
-        Continuar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ContinuarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 500, -1, -1));
-
-        Actualizar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Actualizar.setText("Actualizar");
-        Actualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ActualizarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 500, -1, -1));
-
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Ciudad_ad_lb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Ciudad_ad_lb.setText("Ciudad adyacente:");
-        jPanel1.add(Ciudad_ad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
+        jPanel1.add(Ciudad_ad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, -1, -1));
 
         Distancia_lb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Distancia_lb.setText("Distancia:");
-        jPanel1.add(Distancia_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, -1, -1));
+        jPanel1.add(Distancia_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 300, -1, -1));
 
         Ciudad_lb.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Ciudad_lb.setText("Número de ciudad:");
-        jPanel1.add(Ciudad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
+        jPanel1.add(Ciudad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
 
         Ciudad.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         Ciudad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Ciudad.setText("1");
-        jPanel1.add(Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 50, -1));
+        jPanel1.add(Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 50, -1));
 
+        Seleccion_ciu_Cb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Seleccion_ciu_Cb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione ciudad", "Nuevo", "Ciudad 1", "Ciudad 2", "Ciudad 3" }));
         Seleccion_ciu_Cb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Seleccion_ciu_CbActionPerformed(evt);
             }
         });
-        jPanel1.add(Seleccion_ciu_Cb, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 250, -1));
-
-        Editar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Editar_ciu.setText("Editar ciudad");
-        Editar_ciu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Editar_ciuActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Editar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, 230, -1));
-
-        Crear_ciu.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Crear_ciu.setText("Crear nueva ciudad");
-        Crear_ciu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Crear_ciuActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Crear_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, -1, -1));
+        jPanel1.add(Seleccion_ciu_Cb, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 250, -1));
 
         Ciudad_ad_Título.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Ciudad_ad_Título.setText("Ciudades Adyacentes");
-        jPanel1.add(Ciudad_ad_Título, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, -1, -1));
+        jPanel1.add(Ciudad_ad_Título, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, -1, -1));
 
+        Ciudad_Ad_Cb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Ciudad_Ad_Cb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar ciudad Adyacente", "Nuevo", "Ciudad 1", "Ciudad 2", "Ciudad 3" }));
-        jPanel1.add(Ciudad_Ad_Cb, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 350, -1));
+        Ciudad_Ad_Cb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Ciudad_Ad_CbActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Ciudad_Ad_Cb, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 350, -1));
 
         Ciudad_ad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Ciudad_ad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Ciudad_ad.setText("0");
-        jPanel1.add(Ciudad_ad, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 330, 30, -1));
+        jPanel1.add(Ciudad_ad, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, 30, -1));
 
         Distancia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Distancia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Distancia.setText("0");
-        jPanel1.add(Distancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 40, -1));
+        jPanel1.add(Distancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 40, -1));
 
-        Agregar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Agregar.setText("Agregar");
-        Agregar.addActionListener(new java.awt.event.ActionListener() {
+        Actualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Actualizar.setText("Actualizar");
+        Actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AgregarActionPerformed(evt);
+                ActualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 360, -1, -1));
+        jPanel1.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, -1, -1));
 
-        Advertencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Advertencia.setText("jLabel3");
-        jPanel1.add(Advertencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 590, -1));
+        Continuar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Continuar.setText("Continuar");
+        Continuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContinuarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 390, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 570));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Seleccion_ciu_CbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Seleccion_ciu_CbActionPerformed
-
+        if(Seleccion_ciu_Cb.getSelectedItem().toString() != "Seleccione ciudad") {
+            Ciudad.setVisible(true);
+            Ciudad_lb.setVisible(true);
+            Ciudad_Ad_Cb.setVisible(true);
+        }
     }//GEN-LAST:event_Seleccion_ciu_CbActionPerformed
 
-    private void Crear_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Crear_ciuActionPerformed
-
-    }//GEN-LAST:event_Crear_ciuActionPerformed
-
-    private void Editar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Editar_ciuActionPerformed
-        Seleccion_ciu_Cb.setVisible(true);
-    }//GEN-LAST:event_Editar_ciuActionPerformed
-
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        Menú ventana = new Menú();
+        ventana.setVisible(true);
     }//GEN-LAST:event_ContinuarActionPerformed
-
-    private void AgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AgregarActionPerformed
 
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ActualizarActionPerformed
+
+    private void Ciudad_Ad_CbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ciudad_Ad_CbActionPerformed
+        Ciudad_ad.setVisible(true);
+        Ciudad_ad_Título.setVisible(true);
+        Ciudad_ad_lb.setVisible(true);        
+        Distancia.setVisible(true);
+        Distancia_lb.setVisible(true);
+    }//GEN-LAST:event_Ciudad_Ad_CbActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,8 +200,6 @@ public class Crear_Ciu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Actualizar;
-    private javax.swing.JLabel Advertencia;
-    private javax.swing.JButton Agregar;
     private javax.swing.JLabel Ciudad;
     private javax.swing.JComboBox<String> Ciudad_Ad_Cb;
     private javax.swing.JLabel Ciudad_ad;
@@ -252,10 +207,8 @@ public class Crear_Ciu extends javax.swing.JFrame {
     private javax.swing.JLabel Ciudad_ad_lb;
     private javax.swing.JLabel Ciudad_lb;
     private javax.swing.JButton Continuar;
-    private javax.swing.JButton Crear_ciu;
     private javax.swing.JLabel Distancia;
     private javax.swing.JLabel Distancia_lb;
-    private javax.swing.JButton Editar_ciu;
     private javax.swing.JComboBox<String> Seleccion_ciu_Cb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
