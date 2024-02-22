@@ -31,7 +31,7 @@ public class Menú extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         Simulación = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
-        Editar_ciu = new javax.swing.JButton();
+        Agregar_ciu = new javax.swing.JButton();
         Eliminar_ciu = new javax.swing.JButton();
         Cargar_gr = new javax.swing.JButton();
         Guardar_gr = new javax.swing.JButton();
@@ -80,19 +80,24 @@ public class Menú extends javax.swing.JFrame {
 
         Simulación.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         Simulación.setText("Iniciar Simulación");
+        Simulación.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SimulaciónActionPerformed(evt);
+            }
+        });
         getContentPane().add(Simulación, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1110, 10));
 
-        Editar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Editar_ciu.setText("Agregar o editar ciudad");
-        Editar_ciu.addActionListener(new java.awt.event.ActionListener() {
+        Agregar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Agregar_ciu.setText("Agregar ciudad");
+        Agregar_ciu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Editar_ciuActionPerformed(evt);
+                Agregar_ciuActionPerformed(evt);
             }
         });
-        getContentPane().add(Editar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, -1, -1));
+        getContentPane().add(Agregar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 220, -1));
 
         Eliminar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Eliminar_ciu.setText("Eliminar ciudad");
@@ -216,14 +221,14 @@ public class Menú extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 0, 80, -1));
+        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 80, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Editar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Editar_ciuActionPerformed
+    private void Agregar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar_ciuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Editar_ciuActionPerformed
+    }//GEN-LAST:event_Agregar_ciuActionPerformed
 
     private void Cargar_grActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cargar_grActionPerformed
         // TODO add your handling code here:
@@ -232,6 +237,10 @@ public class Menú extends javax.swing.JFrame {
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void SimulaciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimulaciónActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SimulaciónActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,8 +278,8 @@ public class Menú extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Agregar_ciu;
     private javax.swing.JButton Cargar_gr;
-    private javax.swing.JButton Editar_ciu;
     private javax.swing.JButton Eliminar_ciu;
     private javax.swing.JButton Guardar_gr;
     private javax.swing.JButton Simulación;

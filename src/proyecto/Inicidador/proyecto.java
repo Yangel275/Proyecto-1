@@ -4,7 +4,7 @@
  */
 package proyecto.Inicidador;
 
-import Interfaz.Entrada;
+import Interfaz.Menú;
 
 /**
  *
@@ -16,7 +16,7 @@ public class proyecto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Entrada ventana = new Entrada();
+        Menú ventana = new Menú();
         ventana.setVisible(true);
     }
     
