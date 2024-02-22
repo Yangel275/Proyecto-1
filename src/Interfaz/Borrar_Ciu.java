@@ -26,21 +26,56 @@ public class Borrar_Ciu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel2 = new javax.swing.JLabel();
+        Salida = new javax.swing.JButton();
+        Regresar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        Ciudad = new javax.swing.JComboBox<>();
+        Borrar = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 798, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
+        jLabel2.setText("jLabel2");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Salida.setText("x");
+        Salida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalidaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, 90, -1));
+
+        Regresar.setText("←");
+        Regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegresarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 80, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1.setText("Borrar Ciudad");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
+
+        Ciudad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Ciudad a borrar", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 430, -1));
+
+        Borrar.setText("Borrar");
+        getContentPane().add(Borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, 160, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalidaActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SalidaActionPerformed
+
+    private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
+        this.setVisible(false);
+        Menú ventana = new Menú();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_RegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +113,11 @@ public class Borrar_Ciu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Borrar;
+    private javax.swing.JComboBox<String> Ciudad;
+    private javax.swing.JButton Regresar;
+    private javax.swing.JButton Salida;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -33,8 +33,8 @@ public class Simulación extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Regresar = new javax.swing.JButton();
+        Salida = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -44,13 +44,14 @@ public class Simulación extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 56)); // NOI18N
         jLabel1.setText("Simulación");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, -1, -1));
 
@@ -74,21 +75,21 @@ public class Simulación extends javax.swing.JFrame {
         jLabel6.setText("Número de ciclos:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, -1, -1));
 
-        jButton1.setText("←");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Regresar.setText("←");
+        Regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                RegresarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 80, -1));
+        jPanel1.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 80, -1));
 
-        jButton2.setText("x");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Salida.setText("x");
+        Salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SalidaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, 90, -1));
+        jPanel1.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, 90, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         jLabel7.setText("Grado de importancia de Feromona:");
@@ -168,20 +169,24 @@ public class Simulación extends javax.swing.JFrame {
         });
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 530, -1, -1));
 
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton3.setText("Iniciar");
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 570, 230, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
         this.setVisible(false);
         Menú ventana = new Menú();
         ventana.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_RegresarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void SalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalidaActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_SalidaActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -247,8 +252,9 @@ public class Simulación extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Regresar;
+    private javax.swing.JButton Salida;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -15,7 +15,7 @@ public class Crear_Ciu extends javax.swing.JFrame {
      */
     public Crear_Ciu() {
         initComponents();
-        Crear.setVisible(false); 
+        Actualizar.setVisible(false); 
         
         Ciudad.setVisible(false);
         Ciudad_lb.setVisible(false);
@@ -45,9 +45,11 @@ public class Crear_Ciu extends javax.swing.JFrame {
         Ciudad = new javax.swing.JLabel();
         Ciudad_ad_Título = new javax.swing.JLabel();
         Ciudad_ad = new javax.swing.JLabel();
-        Crear = new javax.swing.JButton();
+        Actualizar = new javax.swing.JButton();
         Distancia = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        Salida = new javax.swing.JButton();
+        Regresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,14 +82,14 @@ public class Crear_Ciu extends javax.swing.JFrame {
         Ciudad_ad.setText("0");
         jPanel1.add(Ciudad_ad, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 30, -1));
 
-        Crear.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Crear.setText("Crear");
-        Crear.addActionListener(new java.awt.event.ActionListener() {
+        Actualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Actualizar.setText("Crear");
+        Actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CrearActionPerformed(evt);
+                ActualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, 170, -1));
+        jPanel1.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, 170, -1));
 
         Distancia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Distancia.addActionListener(new java.awt.event.ActionListener() {
@@ -101,21 +103,45 @@ public class Crear_Ciu extends javax.swing.JFrame {
         jLabel1.setText("Crear ciudad");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 450));
+        Salida.setText("x");
+        Salida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalidaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, 90, -1));
+
+        Regresar.setText("←");
+        Regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegresarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 80, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearActionPerformed
-        this.setVisible(false);
-        Menú ventana = new Menú();
-        ventana.setVisible(true);
+    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         
-    }//GEN-LAST:event_CrearActionPerformed
+        
+    }//GEN-LAST:event_ActualizarActionPerformed
 
     private void DistanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DistanciaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_DistanciaActionPerformed
+
+    private void SalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalidaActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SalidaActionPerformed
+
+    private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
+        this.setVisible(false);
+        Menú ventana = new Menú();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_RegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,14 +179,16 @@ public class Crear_Ciu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Actualizar;
     private javax.swing.JLabel Ciudad;
     private javax.swing.JLabel Ciudad_ad;
     private javax.swing.JLabel Ciudad_ad_Título;
     private javax.swing.JLabel Ciudad_ad_lb;
     private javax.swing.JLabel Ciudad_lb;
-    private javax.swing.JButton Crear;
     private javax.swing.JTextField Distancia;
     private javax.swing.JLabel Distancia_lb;
+    private javax.swing.JButton Regresar;
+    private javax.swing.JButton Salida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
