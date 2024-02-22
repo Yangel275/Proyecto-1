@@ -17,10 +17,7 @@ public class Menú extends javax.swing.JFrame {
         initComponents();
     }
     
-    public Menú(feromonas){
-        initComponents();
-        
-    }
+      
 
     /**
      * This method is called from within the constructor to initialize the form.
