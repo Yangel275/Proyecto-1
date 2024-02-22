@@ -15,7 +15,7 @@ public class Crear_Ciu extends javax.swing.JFrame {
      */
     public Crear_Ciu() {
         initComponents();
-        Actualizar.setVisible(false); 
+        Crear.setVisible(false); 
         
         Ciudad.setVisible(false);
         Ciudad_lb.setVisible(false);
@@ -45,8 +45,7 @@ public class Crear_Ciu extends javax.swing.JFrame {
         Ciudad = new javax.swing.JLabel();
         Ciudad_ad_Título = new javax.swing.JLabel();
         Ciudad_ad = new javax.swing.JLabel();
-        Actualizar = new javax.swing.JButton();
-        Continuar = new javax.swing.JButton();
+        Crear = new javax.swing.JButton();
         Distancia = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
@@ -81,23 +80,14 @@ public class Crear_Ciu extends javax.swing.JFrame {
         Ciudad_ad.setText("0");
         jPanel1.add(Ciudad_ad, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 30, -1));
 
-        Actualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Actualizar.setText("Actualizar");
-        Actualizar.addActionListener(new java.awt.event.ActionListener() {
+        Crear.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Crear.setText("Crear");
+        Crear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ActualizarActionPerformed(evt);
+                CrearActionPerformed(evt);
             }
         });
-        jPanel1.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, -1, -1));
-
-        Continuar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Continuar.setText("Continuar");
-        Continuar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ContinuarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 390, -1, -1));
+        jPanel1.add(Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, 170, -1));
 
         Distancia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Distancia.addActionListener(new java.awt.event.ActionListener() {
@@ -116,15 +106,12 @@ public class Crear_Ciu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
+    private void CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearActionPerformed
         this.setVisible(false);
         Menú ventana = new Menú();
         ventana.setVisible(true);
-    }//GEN-LAST:event_ContinuarActionPerformed
-
-    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ActualizarActionPerformed
+        
+    }//GEN-LAST:event_CrearActionPerformed
 
     private void DistanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DistanciaActionPerformed
         // TODO add your handling code here:
@@ -166,13 +153,12 @@ public class Crear_Ciu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Actualizar;
     private javax.swing.JLabel Ciudad;
     private javax.swing.JLabel Ciudad_ad;
     private javax.swing.JLabel Ciudad_ad_Título;
     private javax.swing.JLabel Ciudad_ad_lb;
     private javax.swing.JLabel Ciudad_lb;
-    private javax.swing.JButton Continuar;
+    private javax.swing.JButton Crear;
     private javax.swing.JTextField Distancia;
     private javax.swing.JLabel Distancia_lb;
     private javax.swing.JLabel jLabel1;

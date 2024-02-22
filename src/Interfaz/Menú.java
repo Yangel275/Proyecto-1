@@ -45,14 +45,6 @@ public class Menú extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel11 = new javax.swing.JLabel();
@@ -61,7 +53,15 @@ public class Menú extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -91,7 +91,7 @@ public class Menú extends javax.swing.JFrame {
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1110, 10));
 
         Agregar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Agregar_ciu.setText("Agregar ciudad");
+        Agregar_ciu.setText("Crear ciudad");
         Agregar_ciu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Agregar_ciuActionPerformed(evt);
@@ -101,6 +101,11 @@ public class Menú extends javax.swing.JFrame {
 
         Eliminar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Eliminar_ciu.setText("Eliminar ciudad");
+        Eliminar_ciu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Eliminar_ciuActionPerformed(evt);
+            }
+        });
         getContentPane().add(Eliminar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, 220, -1));
 
         Cargar_gr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -110,7 +115,7 @@ public class Menú extends javax.swing.JFrame {
                 Cargar_grActionPerformed(evt);
             }
         });
-        getContentPane().add(Cargar_gr, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 230, -1));
+        getContentPane().add(Cargar_gr, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 580, 230, -1));
 
         Guardar_gr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Guardar_gr.setText("Guardar grafo");
@@ -154,38 +159,6 @@ public class Menú extends javax.swing.JFrame {
         jLabel10.setText("- Ciudad de Salida:");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 590, -1, -1));
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton6.setText("0");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 50, -1));
-
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton7.setText("0");
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 50, -1));
-
-        jButton8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton8.setText("0");
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 550, 50, -1));
-
-        jButton9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton9.setText("0");
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 590, 50, -1));
-
-        jButton10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton10.setText("0");
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 50, -1));
-
-        jButton11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton11.setText("0");
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 630, 50, -1));
-
-        jButton12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton12.setText("0");
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 590, 50, -1));
-
-        jButton13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton13.setText("0");
-        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 550, 50, -1));
-
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("\n\n    Revisa las últimas colonias \n  realizadas  o  aprovecha de guardar \n  lo ya hecho para futuros ingresos.\n");
@@ -199,7 +172,7 @@ public class Menú extends javax.swing.JFrame {
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setText("\n         Crea o elimina ciudades para \n  que rus simulaciones cambien de\n  resultados:\n              - Son máximo 20 ciudades\n              - Son mínimo 20 ciudades");
+        jTextArea2.setText("\n         Crea o elimina ciudades para \n  que rus simulaciones cambien de\n  resultados:\n              - Son máximo 20 ciudades\n              - Son mínimo 4 ciudades");
         jScrollPane2.setViewportView(jTextArea2);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, 110));
@@ -215,32 +188,82 @@ public class Menú extends javax.swing.JFrame {
         jLabel12.setText("Simulación");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
-        jButton14.setText("X");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        Salir.setText("X");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                SalirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 80, -1));
+        getContentPane().add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 80, -1));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("0");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 630, 30, -1));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("0");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 30, -1));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("0");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 550, 30, -1));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("0");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 590, 30, -1));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("0");
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 30, -1));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("0");
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 30, -1));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("0");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 550, 30, -1));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("0");
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 590, 30, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Agregar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar_ciuActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        Crear_Ciu ventana = new Crear_Ciu();
+        ventana.setVisible(true);
     }//GEN-LAST:event_Agregar_ciuActionPerformed
 
     private void Cargar_grActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cargar_grActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Cargar_grActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SalirActionPerformed
 
     private void SimulaciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimulaciónActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        Simulación ventana = new Simulación();
+        ventana.setVisible(true);
     }//GEN-LAST:event_SimulaciónActionPerformed
+
+    private void Eliminar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Eliminar_ciuActionPerformed
+        this.setVisible(false);
+        Eliminar_Ciu ventana = new Eliminar_Ciu();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_Eliminar_ciuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,21 +305,21 @@ public class Menú extends javax.swing.JFrame {
     private javax.swing.JButton Cargar_gr;
     private javax.swing.JButton Eliminar_ciu;
     private javax.swing.JButton Guardar_gr;
+    private javax.swing.JButton Salir;
     private javax.swing.JButton Simulación;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
