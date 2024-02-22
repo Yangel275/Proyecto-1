@@ -20,7 +20,7 @@ public class Lista {
     
     }
     
-    public void InsertarUltimo(String nombre, int distancia){
+    public void InsertarUltimo(String nombre, double distancia){
         Arista nuevonodo = new Arista(nombre,distancia);
         if(primero == null){
             
@@ -29,7 +29,7 @@ public class Lista {
             
         }else{
             Arista aux = primero;
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < size-1; i++) {
               aux = aux.next; 
                 
             }
@@ -71,5 +71,17 @@ public class Lista {
         return datosprint;
     }
     
-}
+    public Arista BuscarArista(String destino){
+        Arista aux = primero;
+        while(aux!=null&&!aux.destino.equals(destino)){
+          aux= aux.next;
+                
+            }
+        return aux;
+        }
+        }
+    
+        
+    
+
         

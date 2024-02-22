@@ -32,10 +32,17 @@ public class Proyecto1 {
         graph.display();
         */
         
-        VentanaGrafo simu = new VentanaGrafo();
+        /*VentanaGrafo simu = new VentanaGrafo();
         System.setProperty("org.graphstream.ui", "swing"); 
-        simu.HacerUnaCiudad();
+        simu.HacerUnaCiudad();*/
         
+        Grafo g = new Grafo(100);
+        g.InsertarVertice("Venezuela");
+        g.InsertarVertice("Colombia");
+        g.InsertarVertice("Margarita");
+        g.InsertarArista("Colombia", "Venezuela", 20);
+        g.InsertarArista("Venezuela","Margarita" , 2);
+        g.Imprimir();
     }
     
 }

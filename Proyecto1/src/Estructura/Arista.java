@@ -14,7 +14,7 @@ public class Arista {
     double ferormonas;
     String destino;
     
-    public Arista(String nombre, int dist){
+    public Arista(String nombre, double dist){
             this.distancia = dist;
             this.destino = nombre;
             this.ferormonas=0;
