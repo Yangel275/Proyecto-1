@@ -32,6 +32,7 @@ public class Borrar_Ciu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Ciudad = new javax.swing.JComboBox<>();
         Borrar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         jLabel2.setText("jLabel2");
 
@@ -63,6 +64,9 @@ public class Borrar_Ciu extends javax.swing.JFrame {
 
         Borrar.setText("Borrar");
         getContentPane().add(Borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, 160, -1));
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -119,5 +123,6 @@ public class Borrar_Ciu extends javax.swing.JFrame {
     private javax.swing.JButton Salida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

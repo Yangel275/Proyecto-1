@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interfaz;
-
-import Calculos.Feoromonas;
 /**
  *
  * @author yangel
@@ -206,7 +204,7 @@ public class Simulación extends javax.swing.JFrame {
         double evaporacion = Double.parseDouble(Gr_Evaporacion.getText());
         double visibilidad = Double.parseDouble(Gr_Visibilidad.getText());
         double importancia = Double.parseDouble(Gr_Importancia.getText());
-        Feoromonas feromona = new Feoromonas(evaporacion, visibilidad,importancia);
+        
         
     }//GEN-LAST:event_SimulacionActionPerformed
 
