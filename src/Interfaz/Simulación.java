@@ -4,6 +4,7 @@
  */
 package Interfaz;
 
+import Calculos.Feoromonas;
 /**
  *
  * @author yangel
@@ -37,14 +38,14 @@ public class Simulación extends javax.swing.JFrame {
         Salida = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        Gr_Evaporacion = new javax.swing.JTextField();
+        Num_Hormigas = new javax.swing.JTextField();
+        Num_ciclos = new javax.swing.JTextField();
+        Gr_Visibilidad = new javax.swing.JTextField();
+        Gr_Importancia = new javax.swing.JTextField();
+        Simulacion = new javax.swing.JButton();
+        Ciudad_In = new javax.swing.JLabel();
+        Ciudad_Fin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -99,79 +100,72 @@ public class Simulación extends javax.swing.JFrame {
         jLabel8.setText("Grado de evaporación de Feromona:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 570, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("0");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Gr_Evaporacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Gr_Evaporacion.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Gr_Evaporacion.setText("0");
+        Gr_Evaporacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                Gr_EvaporacionActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 580, -1, -1));
+        jPanel1.add(Gr_Evaporacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 580, -1, -1));
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("0");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Num_Hormigas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_Hormigas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Num_Hormigas.setText("0");
+        Num_Hormigas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                Num_HormigasActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, -1, -1));
+        jPanel1.add(Num_Hormigas, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
 
-        jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setText("0");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        Num_ciclos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_ciclos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Num_ciclos.setText("0");
+        Num_ciclos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                Num_ciclosActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
+        jPanel1.add(Num_ciclos, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
 
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField4.setText("0");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        Gr_Visibilidad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Gr_Visibilidad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Gr_Visibilidad.setText("0");
+        Gr_Visibilidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                Gr_VisibilidadActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
+        jPanel1.add(Gr_Visibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, -1, -1));
 
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField5.setText("0");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        Gr_Importancia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Gr_Importancia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Gr_Importancia.setText("0");
+        Gr_Importancia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                Gr_ImportanciaActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
+        jPanel1.add(Gr_Importancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 530, -1, -1));
 
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField6.setText("0");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        Simulacion.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Simulacion.setText("Iniciar");
+        Simulacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                SimulacionActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, -1, -1));
+        jPanel1.add(Simulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 570, 230, -1));
 
-        jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField7.setText("0");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 530, -1, -1));
+        Ciudad_In.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Ciudad_In.setText("Ciudad de inicio");
+        jPanel1.add(Ciudad_In, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, 30));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton3.setText("Iniciar");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 570, 230, -1));
+        Ciudad_Fin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Ciudad_Fin.setText("Ciudad de llegada");
+        jPanel1.add(Ciudad_Fin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 660));
 
@@ -188,33 +182,33 @@ public class Simulación extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_SalidaActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void Gr_EvaporacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gr_EvaporacionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_Gr_EvaporacionActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void Num_HormigasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num_HormigasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_Num_HormigasActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void Num_ciclosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num_ciclosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_Num_ciclosActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void Gr_VisibilidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gr_VisibilidadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_Gr_VisibilidadActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void Gr_ImportanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gr_ImportanciaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_Gr_ImportanciaActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    private void SimulacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimulacionActionPerformed
+        double evaporacion = Double.parseDouble(Gr_Evaporacion.getText());
+        double visibilidad = Double.parseDouble(Gr_Visibilidad.getText());
+        double importancia = Double.parseDouble(Gr_Importancia.getText());
+        Feoromonas feromona = new Feoromonas(evaporacion, visibilidad,importancia);
+        
+    }//GEN-LAST:event_SimulacionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,9 +246,16 @@ public class Simulación extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Ciudad_Fin;
+    private javax.swing.JLabel Ciudad_In;
+    private javax.swing.JTextField Gr_Evaporacion;
+    private javax.swing.JTextField Gr_Importancia;
+    private javax.swing.JTextField Gr_Visibilidad;
+    private javax.swing.JTextField Num_Hormigas;
+    private javax.swing.JTextField Num_ciclos;
     private javax.swing.JButton Regresar;
     private javax.swing.JButton Salida;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton Simulacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -264,12 +265,5 @@ public class Simulación extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }

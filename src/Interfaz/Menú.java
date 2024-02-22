@@ -3,18 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interfaz;
+import Calculos.Feoromonas;
 
 /**
  *
  * @author yangel
  */
 public class Menú extends javax.swing.JFrame {
-
     /**
      * Creates new form Menú
      */
     public Menú() {
         initComponents();
+    }
+    
+    public Menú(feromonas){
+        initComponents();
+        
     }
 
     /**
@@ -54,14 +59,14 @@ public class Menú extends javax.swing.JFrame {
         jTextArea3 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
         Salir = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        Importancia = new javax.swing.JLabel();
+        Num_hormigas = new javax.swing.JLabel();
+        Num_ciudades = new javax.swing.JLabel();
+        Num_ciclos = new javax.swing.JLabel();
+        Visibilidad = new javax.swing.JLabel();
+        Evaporacion = new javax.swing.JLabel();
+        Ciudad_In = new javax.swing.JLabel();
+        Ciudad_Fin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -196,45 +201,45 @@ public class Menú extends javax.swing.JFrame {
         });
         getContentPane().add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 80, -1));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("0");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 630, 30, -1));
+        Importancia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Importancia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Importancia.setText("0");
+        getContentPane().add(Importancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 630, 30, -1));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("0");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 30, -1));
+        Num_hormigas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_hormigas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num_hormigas.setText("0");
+        getContentPane().add(Num_hormigas, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 30, -1));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("0");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 550, 30, -1));
+        Num_ciudades.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_ciudades.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num_ciudades.setText("0");
+        getContentPane().add(Num_ciudades, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 550, 30, -1));
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("0");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 590, 30, -1));
+        Num_ciclos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_ciclos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num_ciclos.setText("0");
+        getContentPane().add(Num_ciclos, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 590, 30, -1));
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("0");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 30, -1));
+        Visibilidad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Visibilidad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Visibilidad.setText("0");
+        getContentPane().add(Visibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 30, -1));
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("0");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 30, -1));
+        Evaporacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Evaporacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Evaporacion.setText("0");
+        getContentPane().add(Evaporacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 30, -1));
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("0");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 550, 30, -1));
+        Ciudad_In.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Ciudad_In.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ciudad_In.setText("0");
+        getContentPane().add(Ciudad_In, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 550, 30, -1));
 
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("0");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 590, 30, -1));
+        Ciudad_Fin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Ciudad_Fin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ciudad_Fin.setText("0");
+        getContentPane().add(Ciudad_Fin, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 590, 30, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -243,6 +248,7 @@ public class Menú extends javax.swing.JFrame {
         this.setVisible(false);
         Crear_Ciu ventana = new Crear_Ciu();
         ventana.setVisible(true);
+        
     }//GEN-LAST:event_Agregar_ciuActionPerformed
 
     private void Cargar_grActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cargar_grActionPerformed
@@ -251,6 +257,7 @@ public class Menú extends javax.swing.JFrame {
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         System.exit(0);
+        
     }//GEN-LAST:event_SalirActionPerformed
 
     private void SimulaciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimulaciónActionPerformed
@@ -303,23 +310,23 @@ public class Menú extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Agregar_ciu;
     private javax.swing.JButton Cargar_gr;
+    private javax.swing.JLabel Ciudad_Fin;
+    private javax.swing.JLabel Ciudad_In;
     private javax.swing.JButton Eliminar_ciu;
+    private javax.swing.JLabel Evaporacion;
     private javax.swing.JButton Guardar_gr;
+    private javax.swing.JLabel Importancia;
+    private javax.swing.JLabel Num_ciclos;
+    private javax.swing.JLabel Num_ciudades;
+    private javax.swing.JLabel Num_hormigas;
     private javax.swing.JButton Salir;
     private javax.swing.JButton Simulación;
+    private javax.swing.JLabel Visibilidad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

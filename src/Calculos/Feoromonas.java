@@ -7,17 +7,15 @@ package Calculos;
  */
 public class Feoromonas {
     
-       double tau;
-       double deltatau;
-       double rho;
+       private double tau;
+       private double deltatau;
+       private double rho;
 
     public Feoromonas(double tau, double deltatau, double rho) {
         this.tau = tau;
         this.deltatau = deltatau;
         this.rho = rho;
-    }
-       
-       
+    }  
             
  /*
 
@@ -43,7 +41,48 @@ public class Feoromonas {
       // Calcular la cantidad actualizada de feromona
       return (1 - rho) * tau + deltaTau;
     }
-    
+
+    /**
+     * @return the tau
+     */
+    public double getTau() {
+        return tau;
+    }
+
+    /**
+     * @param tau the tau to set
+     */
+    public void setTau(double tau) {
+        this.tau = tau;
+    }
+
+    /**
+     * @return the deltatau
+     */
+    public double getDeltatau() {
+        return deltatau;
+    }
+
+    /**
+     * @param deltatau the deltatau to set
+     */
+    public void setDeltatau(double deltatau) {
+        this.deltatau = deltatau;
+    }
+
+    /**
+     * @return the rho
+     */
+    public double getRho() {
+        return rho;
+    }
+
+    /**
+     * @param rho the rho to set
+     */
+    public void setRho(double rho) {
+        this.rho = rho;
+    }
     
 }
 
