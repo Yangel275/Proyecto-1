@@ -108,7 +108,7 @@ public class Menú extends javax.swing.JFrame {
                 Eliminar_ciuActionPerformed(evt);
             }
         });
-        getContentPane().add(Eliminar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, 220, -1));
+        getContentPane().add(Eliminar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 220, -1));
 
         Cargar_gr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Cargar_gr.setText("Cargar grafo");
@@ -131,7 +131,7 @@ public class Menú extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, -1, -1));
 
         jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 480, 20));
+        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 480, 20));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("- Números de Ciudades:");
@@ -170,21 +170,21 @@ public class Menú extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel11.setText("Ciudades");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, -1, -1));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jTextArea2.setText("\n         Crea o elimina ciudades para \n  que rus simulaciones cambien de\n  resultados:\n              - Son máximo 20 ciudades\n              - Son mínimo 4 ciudades");
         jScrollPane2.setViewportView(jTextArea2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, 110));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, 130));
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
         jTextArea3.setText("      Incia el programa con la idea de comprobar el comportamiento de las \n  hormigas, recuerda que antes de iniciar tienes que colocar:\n           - Importancia de feromona\n           - Grafo de visibilidad\n           - Factor evaporación\n           - Número de hormigas\n           - Número de ciudades\n           - Número de ciclos\n           - Ciudad de inicio\n           - Ciudad de llegada");
         jScrollPane3.setViewportView(jTextArea3);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 430, 170));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 430, 180));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel12.setText("Simulación");
