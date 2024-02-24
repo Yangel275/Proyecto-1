@@ -20,7 +20,7 @@ public class Lista {
     
     }
     
-    public void InsertarUltimo(String nombre, int distancia){
+    public void InsertarUltimo(String nombre, double distancia){
         Arista nuevonodo = new Arista(nombre,distancia);
         if(getPrimero() == null){
             

@@ -28,7 +28,9 @@ public class Comprobación {
         *       - (Ciudad de inicio: 1, Ciudad de llegada: 3, Distancia:  3.1)
         *       - (Ciudad de inicio: 1, Ciudad de llegada: 6, Distancia:  5.2)
         */
-        
+        Lista Ciudad1 = new Lista();
+        Ciudad1.InsertarUltimo("2", 5);
+        Ciudad1.InsertarUltimo("3", 3.1);
         Arista Arista1 = new Arista("2", 5);
         Arista Arista2 = new Arista("3",3.1);
         Arista Arista3 = new Arista("6",5.2);
