@@ -60,6 +60,11 @@ public class Borrar_Ciu extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
 
         Ciudad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Ciudad a borrar", "Item 2", "Item 3", "Item 4" }));
+        Ciudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CiudadActionPerformed(evt);
+            }
+        });
         getContentPane().add(Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 430, -1));
 
         Borrar.setText("Borrar");
@@ -70,16 +75,26 @@ public class Borrar_Ciu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Cierra por completo la app
     private void SalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalidaActionPerformed
         System.exit(0);
     }//GEN-LAST:event_SalidaActionPerformed
 
+    // Este botón permitirá al incio, es decir, el menú
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
         this.setVisible(false);
         Menú ventana = new Menú();
         ventana.setVisible(true);
     }//GEN-LAST:event_RegresarActionPerformed
+
+    /* Se selecciona entre las ciudades existentes, permite solo agarrar aquellos 
+    * que estén guardado de la base de datos para disminuir los errores 
+    *
+    */
+    private void CiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CiudadActionPerformed
+        
+    }//GEN-LAST:event_CiudadActionPerformed
 
     /**
      * @param args the command line arguments

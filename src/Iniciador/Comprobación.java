@@ -21,6 +21,7 @@ public class Comprobación {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        double distancia; 
         /* Ciudad 1
         *   Aristas
         *       - (Ciudad de inicio: 1, Ciudad de llegada: 2, Distancia: 5)
@@ -28,11 +29,14 @@ public class Comprobación {
         *       - (Ciudad de inicio: 1, Ciudad de llegada: 6, Distancia:  5.2)
         */
         
-        
+        Arista Arista1 = new Arista("2", 5);
+        Arista Arista2 = new Arista("3",3.1);
+        Arista Arista3 = new Arista("6",5.2);
         /*
         * Ciudad 2
         *       - (Ciudad de inicio: 2, Ciudad de llegada: 7, Distancia: 5.2)
         */
+        Arista Arista4 = new Arista("7",5.2);
         
         /*
         * Ciudad 3
@@ -40,6 +44,9 @@ public class Comprobación {
         *       - (Ciudad de inicio: 3, Ciudad de llegada: 7, Distancia: 3)
         *       - (Ciudad de inicio: 3, Ciudad de llegada: 5, Distancia: 6)
         */
+        Arista Arista5 = new Arista("2",4.9);
+        Arista Arista6 = new Arista("7",3);
+        Arista Arista7 = new Arista("5",6);
         
         /*
         * Ciudad 4
@@ -49,18 +56,20 @@ public class Comprobación {
         * Ciudad 5
         *       - (Ciudad de inicio: 5, Ciudad de llegada: 4, Distancia: 5,5)
         */
-        
+        Arista Arista8 = new Arista("4",5.5);
         /*
         * Ciudad 6 
         *       - (Ciudad de inicio: 6, Ciudad de llegada: 3, Distancia: 3,2)
         *       - (Ciudad de inicio: 6, Ciudad de llegada: 5, Distancia: 4,7)
         */
-        
+        Arista Arista9 = new Arista("3",3.2);
+        Arista Arista10 = new Arista("5",4.7);
         /*
         * Ciudad 7
         *       - (Ciudad de inicio: 7, Ciudad de llegada: 4, Distancia: 4,8)
         */
         
+        Arista Arista11 = new Arista("4",4.8);
         
     }
 
