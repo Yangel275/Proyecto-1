@@ -78,25 +78,5 @@ public class Validaciones {
         }
 
     }
-    /*
-    Validaciones faltantes:
-    
-    Validar que donde el input sea digito no se coloquen caracteres especiales
-    
-    public static boolean Isnumeronormal(String x){
-        try{
-            
-    
-    Validaciones de campo de texto :
-    
-    
-    Limitar cantidad de palabras en un campo
-    
-    public static boolean CantString(String x){
-        try {
-    
-    
-    
-     */
 
 }
