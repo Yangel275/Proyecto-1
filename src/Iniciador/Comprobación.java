@@ -3,8 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Iniciador;
-import Calculos.Feoromonas;
-
+import Grafo.Arista;
+import Grafo.GuardarEscribirTXT;
+import Grafo.Lista;
+import Grafo.Proyecto1;
+import Grafo.VentanaGrafo;
+import Grafo.Vertice;
+import Grafo.grafo;
 
 /**
  *
@@ -22,7 +27,6 @@ public class Comprobación {
         *       - (Ciudad de inicio: 1, Ciudad de llegada: 3, Distancia:  3.1)
         *       - (Ciudad de inicio: 1, Ciudad de llegada: 6, Distancia:  5.2)
         */
-        
         
         
         /*
@@ -59,5 +63,7 @@ public class Comprobación {
         
         
     }
+
+    
     
 }

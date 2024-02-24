@@ -9,14 +9,43 @@ package Grafo;
  * @author Carl
  */
 public class Vertice {
-        String nombre;
-        Lista adyacentes;
+        private String nombre;
+        private Lista adyacentes;
         
     public Vertice(String nombre){
     this.nombre = nombre;
     this.adyacentes = new Lista();
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the adyacentes
+     */
+    public Lista getAdyacentes() {
+        return adyacentes;
+    }
+
+    /**
+     * @param adyacentes the adyacentes to set
+     */
+    public void setAdyacentes(Lista adyacentes) {
+        this.adyacentes = adyacentes;
+    }
 }            
     
-}
+    
 
 

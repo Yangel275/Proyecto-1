@@ -39,8 +39,8 @@ public class grafo {
     public void InsertarVetice(String destino) {
         if (cant_ciudades != max) {
             for (int i = 0; i < max; i++) {
-                if (this.ciudades[i].nombre == "") {
-                    this.ciudades[i].nombre = destino;
+                if (this.ciudades[i].getNombre() == "") {
+                    this.ciudades[i].setNombre(destino);
                     break;
 
                 }
@@ -63,10 +63,11 @@ public class grafo {
     public void Imprimir() {
         for (int i = 0; i < max; i++) {
 
-            System.out.println(this.ciudades[i].nombre);
-            System.out.println(this.ciudades[i].adyacentes.Imprimir());
+            System.out.println(this.ciudades[i].getNombre());
+            System.out.println(this.ciudades[i].getAdyacentes().Imprimir());
 
         }
     }
+    
 }
 

@@ -10,8 +10,8 @@ package Grafo;
  */
 public class Lista {
     
-    Arista primero;
-    int size;
+    private Arista primero;
+    private int size;
     
     public Lista(){
         
@@ -22,30 +22,30 @@ public class Lista {
     
     public void InsertarUltimo(String nombre, int distancia){
         Arista nuevonodo = new Arista(nombre,distancia);
-        if(primero == null){
+        if(getPrimero() == null){
             
-            primero = nuevonodo;
-            size++;
+            setPrimero(nuevonodo);
+            setSize(getSize() + 1);
             
         }else{
-            Arista aux = primero;
-            for (int i = 0; i < size; i++) {
+            Arista aux = getPrimero();
+            for (int i = 0; i < getSize(); i++) {
               aux = aux.next; 
                 
             }
             aux.next = nuevonodo;
-            size++;
+            setSize(getSize() + 1);
         }
         
     }
     
     public void Eliminar(String nombre){
     
-        if(primero==null){
+        if(getPrimero()==null){
         //JOptionPane.showMessageDialog(null, "No hay elementos para eliminar");
         }
-        Arista aux = primero;
-        for (int i = 0; i < size; i++) {
+        Arista aux = getPrimero();
+        for (int i = 0; i < getSize(); i++) {
             
             if(aux.next.destino.equals(nombre)){
                 break;
@@ -61,14 +61,42 @@ public class Lista {
     }
     
     public String Imprimir(){
-       Arista aux = primero;
+       Arista aux = getPrimero();
        String datosprint = "";
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < getSize(); i++) {
             datosprint += aux.destino + ", ";
             aux = aux.next;
         
         }
         return datosprint;
+    }
+
+    /**
+     * @return the primero
+     */
+    public Arista getPrimero() {
+        return primero;
+    }
+
+    /**
+     * @param primero the primero to set
+     */
+    public void setPrimero(Arista primero) {
+        this.primero = primero;
+    }
+
+    /**
+     * @return the size
+     */
+    public int getSize() {
+        return size;
+    }
+
+    /**
+     * @param size the size to set
+     */
+    public void setSize(int size) {
+        this.size = size;
     }
     
 }
