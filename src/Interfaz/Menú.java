@@ -4,18 +4,20 @@
  */
 package Interfaz;
 
+
 /**
  *
  * @author yangel
  */
 public class Menú extends javax.swing.JFrame {
-
     /**
      * Creates new form Menú
      */
     public Menú() {
         initComponents();
     }
+    
+      
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,7 +33,7 @@ public class Menú extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         Simulación = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
-        Editar_ciu = new javax.swing.JButton();
+        Agregar_ciu = new javax.swing.JButton();
         Eliminar_ciu = new javax.swing.JButton();
         Cargar_gr = new javax.swing.JButton();
         Guardar_gr = new javax.swing.JButton();
@@ -45,14 +47,6 @@ public class Menú extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel11 = new javax.swing.JLabel();
@@ -61,34 +55,60 @@ public class Menú extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        Importancia = new javax.swing.JLabel();
+        Num_hormigas = new javax.swing.JLabel();
+        Num_ciudades = new javax.swing.JLabel();
+        Num_ciclos = new javax.swing.JLabel();
+        Visibilidad = new javax.swing.JLabel();
+        Evaporacion = new javax.swing.JLabel();
+        Ciudad_In = new javax.swing.JLabel();
+        Ciudad_Fin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setText("Colonia de Hormigas");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("- Números de Hormigas:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, -1, -1));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 20, 600));
 
         Simulación.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         Simulación.setText("Iniciar Simulación");
-
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-
-        Editar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Editar_ciu.setText("Agregar o editar ciudad");
-        Editar_ciu.addActionListener(new java.awt.event.ActionListener() {
+        Simulación.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Editar_ciuActionPerformed(evt);
+                SimulaciónActionPerformed(evt);
             }
         });
+        getContentPane().add(Simulación, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
+
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1110, 10));
+
+        Agregar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Agregar_ciu.setText("Crear ciudad");
+        Agregar_ciu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Agregar_ciuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Agregar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 220, -1));
 
         Eliminar_ciu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Eliminar_ciu.setText("Eliminar ciudad");
+        Eliminar_ciu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Eliminar_ciuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Eliminar_ciu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 220, -1));
 
         Cargar_gr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Cargar_gr.setText("Cargar grafo");
@@ -97,289 +117,157 @@ public class Menú extends javax.swing.JFrame {
                 Cargar_grActionPerformed(evt);
             }
         });
+        getContentPane().add(Cargar_gr, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 580, 230, -1));
 
         Guardar_gr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Guardar_gr.setText("Guardar grafo");
+        getContentPane().add(Guardar_gr, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 620, 230, -1));
 
         jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 480, 20));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setText("Grafos");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, -1, -1));
 
         jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 480, 20));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("- Números de Ciudades:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("- Número de ciclos:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setText("- Grado de visibilidad:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 630, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setText("- Grado de feromonas: ");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 630, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel8.setText("- Factor evaporación:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 510, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel9.setText("- Ciudad  de llegada:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 550, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel10.setText("- Ciudad de Salida:");
-
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton6.setText("0");
-
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton7.setText("0");
-
-        jButton8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton8.setText("0");
-
-        jButton9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton9.setText("0");
-
-        jButton10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton10.setText("0");
-
-        jButton11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton11.setText("0");
-
-        jButton12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton12.setText("0");
-
-        jButton13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton13.setText("0");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 590, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("\n\n    Revisa las últimas colonias \n  realizadas  o  aprovecha de guardar \n  lo ya hecho para futuros ingresos.\n");
         jScrollPane1.setViewportView(jTextArea1);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 220, 120));
+
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel11.setText("Ciudades");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, -1, -1));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setText("\n         Crea o elimina ciudades para \n  que rus simulaciones cambien de\n  resultados:\n              - Son máximo 20 ciudades\n              - Son mínimo 20 ciudades");
+        jTextArea2.setText("\n         Crea o elimina ciudades para \n  que rus simulaciones cambien de\n  resultados:\n              - Son máximo 20 ciudades\n              - Son mínimo 4 ciudades");
         jScrollPane2.setViewportView(jTextArea2);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, 130));
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
         jTextArea3.setText("      Incia el programa con la idea de comprobar el comportamiento de las \n  hormigas, recuerda que antes de iniciar tienes que colocar:\n           - Importancia de feromona\n           - Grafo de visibilidad\n           - Factor evaporación\n           - Número de hormigas\n           - Número de ciudades\n           - Número de ciclos\n           - Ciudad de inicio\n           - Ciudad de llegada");
         jScrollPane3.setViewportView(jTextArea3);
 
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 430, 180));
+
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel12.setText("Simulación");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
-        jButton14.setText("X");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        Salir.setText("X");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                SalirActionPerformed(evt);
             }
         });
+        getContentPane().add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 80, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1110, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(310, 310, 310)
-                            .addComponent(jLabel1)
-                            .addGap(254, 254, 254)
-                            .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(260, 260, 260)
-                                    .addComponent(Simulación))
-                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(140, 140, 140)
-                                    .addComponent(jLabel11))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(250, 250, 250)
-                                    .addComponent(Editar_ciu))
-                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(20, 20, 20)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5))
-                            .addGap(20, 20, 20)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(70, 70, 70)
-                            .addComponent(jLabel9)
-                            .addGap(20, 20, 20)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(500, 500, 500)
-                            .addComponent(jLabel6))
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(240, 240, 240)
-                            .addComponent(Guardar_gr, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(720, 720, 720)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jLabel12))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(240, 240, 240)
-                            .addComponent(Cargar_gr, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(480, 480, 480)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(250, 250, 250)
-                            .addComponent(Eliminar_ciu, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(840, 840, 840)
-                            .addComponent(jLabel10))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(720, 720, 720)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(840, 840, 840)
-                            .addComponent(jLabel8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(jLabel3))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(840, 840, 840)
-                            .addComponent(jLabel7)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addComponent(jButton14))
-                    .addGap(16, 16, 16)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(Simulación)
-                            .addGap(196, 196, 196)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel11))
-                            .addGap(22, 22, 22)
-                            .addComponent(Editar_ciu)
-                            .addGap(68, 68, 68)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(430, 430, 430)
-                            .addComponent(jLabel2)
-                            .addGap(15, 15, 15)
-                            .addComponent(jLabel4)
-                            .addGap(15, 15, 15)
-                            .addComponent(jLabel5))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(430, 430, 430)
-                            .addComponent(jButton7)
-                            .addGap(13, 13, 13)
-                            .addComponent(jButton8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(470, 470, 470)
-                            .addComponent(jLabel9))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(430, 430, 430)
-                            .addComponent(jButton6)
-                            .addGap(13, 13, 13)
-                            .addComponent(jButton13)
-                            .addGap(13, 13, 13)
-                            .addComponent(jButton12)
-                            .addGap(13, 13, 13)
-                            .addComponent(jButton11))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(550, 550, 550)
-                            .addComponent(jLabel6))
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(540, 540, 540)
-                            .addComponent(Guardar_gr))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(550, 550, 550)
-                            .addComponent(jButton10))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(70, 70, 70)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel12))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(490, 490, 490)
-                            .addComponent(Cargar_gr))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(300, 300, 300)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(470, 470, 470)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(360, 360, 360)
-                            .addComponent(Eliminar_ciu))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(510, 510, 510)
-                            .addComponent(jLabel10))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(510, 510, 510)
-                            .addComponent(jButton9))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(430, 430, 430)
-                            .addComponent(jLabel8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(420, 420, 420)
-                            .addComponent(jLabel3))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(550, 550, 550)
-                            .addComponent(jLabel7)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        Importancia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Importancia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Importancia.setText("0");
+        getContentPane().add(Importancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 630, 30, -1));
+
+        Num_hormigas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_hormigas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num_hormigas.setText("0");
+        getContentPane().add(Num_hormigas, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 30, -1));
+
+        Num_ciudades.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_ciudades.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num_ciudades.setText("0");
+        getContentPane().add(Num_ciudades, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 550, 30, -1));
+
+        Num_ciclos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Num_ciclos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Num_ciclos.setText("0");
+        getContentPane().add(Num_ciclos, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 590, 30, -1));
+
+        Visibilidad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Visibilidad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Visibilidad.setText("0");
+        getContentPane().add(Visibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 30, -1));
+
+        Evaporacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Evaporacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Evaporacion.setText("0");
+        getContentPane().add(Evaporacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 30, -1));
+
+        Ciudad_In.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Ciudad_In.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ciudad_In.setText("0");
+        getContentPane().add(Ciudad_In, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 550, 30, -1));
+
+        Ciudad_Fin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Ciudad_Fin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ciudad_Fin.setText("0");
+        getContentPane().add(Ciudad_Fin, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 590, 30, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Editar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Editar_ciuActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Editar_ciuActionPerformed
+    private void Agregar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar_ciuActionPerformed
+        this.setVisible(false);
+        Crear_Ciu ventana = new Crear_Ciu();
+        ventana.setVisible(true);
+        
+    }//GEN-LAST:event_Agregar_ciuActionPerformed
 
     private void Cargar_grActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cargar_grActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Cargar_grActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        System.exit(0);
+        
+    }//GEN-LAST:event_SalirActionPerformed
+
+    private void SimulaciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimulaciónActionPerformed
+        this.setVisible(false);
+        Simulación ventana = new Simulación();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_SimulaciónActionPerformed
+
+    private void Eliminar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Eliminar_ciuActionPerformed
+        this.setVisible(false);
+        Eliminar_Ciu ventana = new Eliminar_Ciu();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_Eliminar_ciuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -417,20 +305,20 @@ public class Menú extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Agregar_ciu;
     private javax.swing.JButton Cargar_gr;
-    private javax.swing.JButton Editar_ciu;
+    private javax.swing.JLabel Ciudad_Fin;
+    private javax.swing.JLabel Ciudad_In;
     private javax.swing.JButton Eliminar_ciu;
+    private javax.swing.JLabel Evaporacion;
     private javax.swing.JButton Guardar_gr;
+    private javax.swing.JLabel Importancia;
+    private javax.swing.JLabel Num_ciclos;
+    private javax.swing.JLabel Num_ciudades;
+    private javax.swing.JLabel Num_hormigas;
+    private javax.swing.JButton Salir;
     private javax.swing.JButton Simulación;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel Visibilidad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
