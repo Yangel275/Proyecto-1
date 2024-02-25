@@ -17,7 +17,7 @@ public class VentanaGrafo {
   
     private Graph graph;
     private Viewer usuario;
-    grafo g = new grafo(0);
+    grafo g = new grafo();
     
     public VentanaGrafo() {
         //crea un nuevo grafo
@@ -30,8 +30,8 @@ public class VentanaGrafo {
         return usuario;
     }
     
-    public void HacerUnaCiudad(){
-        g.CrearLista();
+    public void HacerUnaCiudad(String ciudad,double distancia, String destino){
+        g.Crear_Arista(ciudad, distancia, destino);
         String vertice = JOptionPane.showInputDialog(null,"Nombre de la ciudad...");
         g.InsertarVetice(vertice);
 }

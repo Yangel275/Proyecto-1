@@ -17,11 +17,8 @@ public class Proyecto1 {
      */
     public static void main(String[] args) {
         
-        grafo simu = new grafo(8);
-        Graph graph = new SingleGraph("Proyecto1");
-        simu.InsertarVetice("i");
-        simu.Imprimir();
         
+        Graph graph = new SingleGraph("Proyecto1");
         graph.addNode("A"); 
         graph.addNode("B" );
         graph.addNode("C" );

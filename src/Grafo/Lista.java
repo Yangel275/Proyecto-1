@@ -4,6 +4,9 @@
  */
 package Grafo;
 
+import Grafo.Arista;
+import Interfaz.Error;
+
 /**
  *
  * @author Carl
@@ -22,53 +25,92 @@ public class Lista {
     
     public void InsertarUltimo(String nombre, double distancia){
         Arista nuevonodo = new Arista(nombre,distancia);
-        if(getPrimero() == null){
-            
-            setPrimero(nuevonodo);
-            setSize(getSize() + 1);
-            
+        if(this.getPrimero() == null){
+            this.setPrimero(nuevonodo);
+            this.setSize(this.getSize() + 1); 
         }else{
-            Arista aux = getPrimero();
-            for (int i = 0; i < getSize(); i++) {
-              aux = aux.next; 
-                
-            }
-            aux.next = nuevonodo;
-            setSize(getSize() + 1);
+            boolean similitud = false;
+            Arista aux = this.getPrimero();
+            for(int i = 0;  i < this.getSize(); i++){
+                if(aux == null){
+                    break;
+                }
+                if(nuevonodo.destino.equals(aux.destino)){
+                    similitud = true;
+                        break;
+                }
+                aux = aux.next;
+            }    
+            if( similitud == true){
+                String error = "\n\n                 Ya existe una ciudad adyacente";
+                Error nuevo = new Error();
+                nuevo.RecibirAd(error);
+            }else{
+                aux = this.getPrimero();
+                for(int i = 0; i < this.getSize()-1; i++){
+                    aux = aux.next;
+                }
+                aux.EnlazarArista(nuevonodo);
+                this.setSize(1+ this.getSize());  
+            }            
         }
-        
     }
     
     public void Eliminar(String nombre){
-    
+        
         if(getPrimero()==null){
-        //JOptionPane.showMessageDialog(null, "No hay elementos para eliminar");
+            String error = "\n\n                 No hay elementos para eliminar";
+            Error nuevo = new Error();
+            nuevo.RecibirAd(error);
+        }else{
+            Arista aux = this.getPrimero();
+            for (int i = 0; i < this.getSize(); i++) {
+                if(aux.destino.equals(nombre)){
+                    aux = aux;
+                    break;
+                }
+                aux = aux.next;
+            }
+            if(aux.equals(this.getPrimero())){
+                if(aux.next == null){
+                    aux = null;
+                    this.setPrimero(aux);
+                    this.setSize(this.getSize() - 1); 
+                }else{
+                    aux = aux.next;
+                    this.setPrimero(aux);
+                    this.setSize(this.getSize() - 1);
+                }
+            }else{
+                Arista nuevo = this.getPrimero();
+                for (int i = 0; i < this.getSize(); i++) {
+                    if(nuevo.next.equals(aux)){
+                        break;
+                    }
+                    nuevo = nuevo.next;
+                }nuevo.EnlazarArista(aux.next);
+            }
         }
-        Arista aux = getPrimero();
-        for (int i = 0; i < getSize(); i++) {
-            
-            if(aux.next.destino.equals(nombre)){
+    }
+    
+    public String Imprimir(){
+       Arista aux = this.getPrimero();
+       String datosprint = "Ciudades adyacentes:\n"+ "\n";
+       if(aux == null){
+           datosprint = "No hay ciudades adyacentes:\n";
+           return datosprint;
+       }else{
+            for (int i = 0; i < this.getSize(); i++) {
+            datosprint += "     - Ciudad:" + aux.destino +"   - Distancia: " + String.valueOf(aux.distancia)+  "\n";
+            if(aux.next == null){
                 break;
             }
             aux = aux.next;
         }
-        
-        if(aux.next != null){
-            aux.next = aux.next.next;
-        }
-      
-    
-    }
-    
-    public String Imprimir(){
-       Arista aux = getPrimero();
-       String datosprint = "";
-        for (int i = 0; i < getSize(); i++) {
-            datosprint += aux.destino + ", ";
-            aux = aux.next;
-        
-        }
         return datosprint;
+       }
+       
+        
     }
 
     /**

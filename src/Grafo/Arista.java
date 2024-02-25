@@ -11,13 +11,29 @@ package Grafo;
 public class Arista {
     Arista next;
     double distancia;
-    double ferormonas;
+    double feromonas;
     String destino;
     
     public Arista(String nombre, double dist){
             this.distancia = dist;
             this.destino = nombre;
-            this.ferormonas=0;
+            this.feromonas=0;
             this.next = null;
+    }
+    
+    public void EnlazarArista(Arista siguiente){
+        next = siguiente;
+    }
+    
+    public  Arista obtenerSiguiente(){
+        return next;
+    }
+    
+    public void ActulizarFeromonas(double feromona){
+        this.feromonas = feromona;
+    }
+    
+    public double obtenerFeromonas(){
+        return feromonas;
     }
 }
