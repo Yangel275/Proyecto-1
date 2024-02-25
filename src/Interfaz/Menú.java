@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interfaz;
-
+import Grafo.Arista;
+import Grafo.Lista;
+import Grafo.Vertice;
+import Grafo.grafo;     
 
 /**
  *
@@ -17,7 +20,47 @@ public class Menú extends javax.swing.JFrame {
         initComponents();
     }
     
-      
+    public void inicio(){
+        grafo colonia = new grafo();
+        
+        colonia.setPrimero("1");
+        colonia.setUltimo("7");
+        
+        // Ciudad 1
+        colonia.CrearVetice("1");
+        colonia.Crear_Arista("1", "2", 5);
+        colonia.Crear_Arista("1", "3", 3.1);
+        colonia.Crear_Arista("1", "6", 5.2);
+        
+        // Ciudad 2
+        colonia.CrearVetice("2");
+        colonia.Crear_Arista("2", "7", 5.2);
+        
+        // Ciudad 3
+        colonia.CrearVetice("3");
+        colonia.Crear_Arista("3", "2", 4.9);
+        colonia.Crear_Arista("3", "7", 3);
+        colonia.Crear_Arista("3", "5", 6);
+        
+        //Ciudad 4
+        colonia.CrearVetice("4");
+        
+        //Ciudad 5
+        colonia.CrearVetice("5");
+        colonia.Crear_Arista("5", "4", 5.5);
+        
+        
+        //Ciudad 6 
+        colonia.CrearVetice("6");
+        colonia.Crear_Arista("6", "3", 3.2);
+        colonia.Crear_Arista("6", "5",4.7);
+        
+       
+        //Ciudad 7
+        colonia.CrearVetice("7");
+        colonia.Crear_Arista("7", "4", 4.8);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

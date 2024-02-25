@@ -10,10 +10,10 @@ import Interfaz.Error;
  */
 public class grafo {
 
-    private Vertice[] ciudades;
-    private int cant_ciudades;
-    private String primero;
-    private String ultimo;
+    Vertice[] ciudades;
+    int cant_ciudades;
+    String primero;
+    String ultimo;
 
     public grafo() {
         this.cant_ciudades = 0;
@@ -113,14 +113,14 @@ public class grafo {
             boolean similitud = false;
             int probar = adyacentes.getSize(); 
             for(int j = 0; j < probar; j++){
-                if(aux.destino.equals(ciudad)){
+                if(aux.getDestino().equals(ciudad)){
                     similitud = true;
                     break;
                 }
-                if(aux.next == null){
+                if(aux.getNext() == null){
                     break;
                 }
-                aux = aux.next;
+                aux = aux.getNext();
                     
             }
             if(similitud == true){
@@ -132,6 +132,9 @@ public class grafo {
     }
     public String Imprimir() {
         String datos = "El Grafo está compuesto por las siguientes ciudades: \n \n"; 
+        datos += "  - El nido está en: "+this.getPrimero()+"\n";
+        datos += "  - La comida está en: "+this.getUltimo()+"\n";
+        datos += "  - Conformado por un total de "+ String.valueOf(this.getCant_ciudades())+"  .Estas son: \n\n";
         for(int i = 0; i < this.getCant_ciudades(); i++) {
             datos += ciudades[i].Imprimmir();
         }

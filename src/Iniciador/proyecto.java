@@ -4,6 +4,7 @@
  */
 package Iniciador;
 
+import Grafo.grafo;
 import Interfaz.Menú;
 
 /**
@@ -16,8 +17,10 @@ public class proyecto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Menú ventana = new Menú();
-        //ventana.setVisible(true);
+        
+        Menú ventana = new Menú();
+        ventana.inicio();
+        ventana.setVisible(true);
     }
     
 }

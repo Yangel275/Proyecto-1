@@ -9,8 +9,8 @@ package Grafo;
  * @author Carl
  */
 public class Vertice {
-        private String nombre;
-        private Lista adyacentes;
+    private String nombre;
+    private Lista adyacentes;
         
     public Vertice(String nombre){
     this.nombre = nombre;

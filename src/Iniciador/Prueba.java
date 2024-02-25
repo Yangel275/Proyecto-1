@@ -3,25 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Iniciador;
-import Grafo.Arista;
-import Grafo.GuardarEscribirTXT;
-import Grafo.Lista;
-import Grafo.VentanaGrafo;
-import Grafo.Vertice;
-import Grafo.grafo;
 
+
+import Grafo.grafo;
+import Grafo.La_simulacion;
+import Hormigas.hormigas;
 /**
  *
  * @author yangel
  */
-public class Comprobación {
+public class Prueba {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Grafo, colonia de hormigas
+        La_simulacion simulacion = new La_simulacion();
+        
+        
         grafo colonia = new grafo();
+        
+        colonia.setPrimero("1");
+        colonia.setUltimo("7");
         
         // Ciudad 1
         colonia.CrearVetice("1");
@@ -57,24 +60,29 @@ public class Comprobación {
         colonia.CrearVetice("7");
         colonia.Crear_Arista("7", "4", 4.8);
         
+        int ciclos = 0; 
+        double Importancia_feromona = 1;
+        double Visibilidad_ciudad = 2;
+        double factor_evaporacion = 0.5;
         
-        colonia.EliminarVertice("5");
+        hormigas hormiguero = new hormigas();
+        hormiguero.nuevo_Hormiguero(4, colonia);
         
-        colonia.Eliminar_Arista("6", "3");
-        System.out.println(colonia.Imprimir());
+        simulacion.setColonia(colonia);
+        simulacion.setCiclos(ciclos);
+        simulacion.setHormiguero(hormiguero);
+        simulacion.setImportancia_feromona(Importancia_feromona);
+        simulacion.setVisibilidad_ciudad(Visibilidad_ciudad);
+        simulacion.setFactor_evaporacion(factor_evaporacion);
+        
+        System.out.println(simulacion.Imprimir());
         
         
         
         
         
-        
-        
-       
-        
-       
-       
     }
+}
 
     
-    
-}
+

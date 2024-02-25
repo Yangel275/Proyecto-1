@@ -35,11 +35,11 @@ public class Lista {
                 if(aux == null){
                     break;
                 }
-                if(nuevonodo.destino.equals(aux.destino)){
+                if(nuevonodo.getDestino().equals(aux.getDestino())){
                     similitud = true;
                         break;
                 }
-                aux = aux.next;
+                aux = aux.getNext();
             }    
             if( similitud == true){
                 String error = "\n\n                 Ya existe una ciudad adyacente";
@@ -48,7 +48,7 @@ public class Lista {
             }else{
                 aux = this.getPrimero();
                 for(int i = 0; i < this.getSize()-1; i++){
-                    aux = aux.next;
+                    aux = aux.getNext();
                 }
                 aux.EnlazarArista(nuevonodo);
                 this.setSize(1+ this.getSize());  
@@ -65,30 +65,30 @@ public class Lista {
         }else{
             Arista aux = this.getPrimero();
             for (int i = 0; i < this.getSize(); i++) {
-                if(aux.destino.equals(nombre)){
+                if(aux.getDestino().equals(nombre)){
                     aux = aux;
                     break;
                 }
-                aux = aux.next;
+                aux = aux.getNext();
             }
             if(aux.equals(this.getPrimero())){
-                if(aux.next == null){
+                if(aux.getNext() == null){
                     aux = null;
                     this.setPrimero(aux);
                     this.setSize(this.getSize() - 1); 
                 }else{
-                    aux = aux.next;
+                    aux = aux.getNext();
                     this.setPrimero(aux);
                     this.setSize(this.getSize() - 1);
                 }
             }else{
                 Arista nuevo = this.getPrimero();
                 for (int i = 0; i < this.getSize(); i++) {
-                    if(nuevo.next.equals(aux)){
+                    if(nuevo.getNext().equals(aux)){
                         break;
                     }
-                    nuevo = nuevo.next;
-                }nuevo.EnlazarArista(aux.next);
+                    nuevo = nuevo.getNext();
+                }nuevo.EnlazarArista(aux.getNext());
             }
         }
     }
@@ -97,15 +97,15 @@ public class Lista {
        Arista aux = this.getPrimero();
        String datosprint = "Ciudades adyacentes:\n"+ "\n";
        if(aux == null){
-           datosprint = "No hay ciudades adyacentes:\n";
+           datosprint = "No hay ciudades adyacentes\n";
            return datosprint;
        }else{
             for (int i = 0; i < this.getSize(); i++) {
-            datosprint += "     - Ciudad:" + aux.destino +"   - Distancia: " + String.valueOf(aux.distancia)+  "\n";
-            if(aux.next == null){
+            datosprint += "     - Ciudad:" + aux.getDestino() +"   - Distancia: " + String.valueOf(aux.getDistancia())+  "\n";
+            if(aux.getNext() == null){
                 break;
             }
-            aux = aux.next;
+            aux = aux.getNext();
         }
         return datosprint;
        }
