@@ -256,10 +256,17 @@ public class Menú extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Agregar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar_ciuActionPerformed
-        this.setVisible(false);
-        Crear_Ciu ventana = new Crear_Ciu();
-        ventana.setVisible(true);
-        
+        La_simulacion simulacion = Emulador.getSimulacion();
+        if(simulacion.getColonia().getCant_ciudades()<20){
+            this.setVisible(false);
+            Crear_Ciu ventana = new Crear_Ciu();
+            ventana.Actualizacion();
+            ventana.setVisible(true);
+        }else{
+            String error = "\n\n              Alcanzaste el número máximo de ciudades";
+            Error nuevo = new Error();
+            nuevo.RecibirAd(error);
+        }
     }//GEN-LAST:event_Agregar_ciuActionPerformed
 
     private void Cargar_grActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cargar_grActionPerformed
@@ -278,9 +285,16 @@ public class Menú extends javax.swing.JFrame {
     }//GEN-LAST:event_SimulaciónActionPerformed
 
     private void Eliminar_ciuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Eliminar_ciuActionPerformed
-        this.setVisible(false);
-        Eliminar_Ciu ventana = new Eliminar_Ciu();
-        ventana.setVisible(true);
+        La_simulacion simulacion = Emulador.getSimulacion();
+        if(simulacion.getColonia().getCant_ciudades()<20){
+            this.setVisible(false);
+            Eliminar_Ciu ventana = new Eliminar_Ciu();
+            ventana.setVisible(true);
+        }else{
+            String error = "\n\n              Alcanzaste el número máximo de ciudades";
+            Error nuevo = new Error();
+            nuevo.RecibirAd(error);
+        }
     }//GEN-LAST:event_Eliminar_ciuActionPerformed
 
     /**

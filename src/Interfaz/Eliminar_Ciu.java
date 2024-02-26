@@ -4,6 +4,8 @@
  */
 package Interfaz;
 
+import Grafo.La_simulacion;
+
 /**
  *
  * @author yangel
@@ -17,6 +19,10 @@ public class Eliminar_Ciu extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void Actualizacion(){
+        La_simulacion simulacion = Emulador.getSimulacion();
+        Mostrar1.setText(simulacion.getColonia().Imprimir());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,10 +33,11 @@ public class Eliminar_Ciu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Eliminar = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Mostrar1 = new javax.swing.JTextArea();
+        Ciudad = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -39,22 +46,55 @@ public class Eliminar_Ciu extends javax.swing.JFrame {
         jLabel1.setText("Eliminar ciudad");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 340, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar ciudad", " ", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 320, -1));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setText("Ciudad:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, -1, -1));
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("0");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 60, 20));
+        Eliminar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Eliminar.setText("Borrar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, -1, -1));
 
-        jButton1.setText("Borrar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, -1, -1));
+        Mostrar1.setColumns(20);
+        Mostrar1.setRows(5);
+        Mostrar1.setEnabled(false);
+        jScrollPane2.setViewportView(Mostrar1);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 460, 290));
+
+        Ciudad.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        getContentPane().add(Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 190, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+        String eliminar_ciudad = Ciudad.getSelectedText();
+        La_simulacion simulacion = Emulador.getSimulacion();
+        int similitud = 0;
+                for(int i = 0; i <simulacion.getColonia().getCant_ciudades(); i++ ){
+                    if(simulacion.getColonia().getCiudades()[i].getNombre().equals(eliminar_ciudad)){
+                        similitud = 1;
+                    break;
+                    }
+                }
+        if(similitud == 1){        
+            simulacion.getColonia().EliminarVertice(eliminar_ciudad);
+            if(simulacion.getColonia().getCant_ciudades()==4){
+                        this.setVisible(false);
+                        Menú ventana = new Menú();
+                        ventana.setVisible(true);
+            }
+        }else{
+            String error = "\n\n              Ingresaste los datos incorrectos";
+            Error nuevo = new Error();
+            nuevo.RecibirAd(error); 
+        }
+    }//GEN-LAST:event_EliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,10 +132,11 @@ public class Eliminar_Ciu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField Ciudad;
+    private javax.swing.JButton Eliminar;
+    private javax.swing.JTextArea Mostrar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

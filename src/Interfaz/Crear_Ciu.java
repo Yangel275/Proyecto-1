@@ -4,6 +4,8 @@
  */
 package Interfaz;
 
+import Grafo.La_simulacion;
+
 /**
  *
  * @author yangel
@@ -15,20 +17,15 @@ public class Crear_Ciu extends javax.swing.JFrame {
      */
     public Crear_Ciu() {
         initComponents();
-        Actualizar.setVisible(false); 
-        
-        Ciudad.setVisible(false);
-        Ciudad_lb.setVisible(false);
-        
-        
-        Ciudad_ad.setVisible(false);
-        Ciudad_ad_Título.setVisible(false);
-        Ciudad_ad_lb.setVisible(false);
-        
-        Distancia.setVisible(false);
-        Distancia_lb.setVisible(false);
     }
 
+    public void Actualizacion(){
+        La_simulacion simulacion = Emulador.getSimulacion();
+        Mostrar.setText(simulacion.getColonia().Imprimir());
+    }
+        
+        
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,14 +39,16 @@ public class Crear_Ciu extends javax.swing.JFrame {
         Ciudad_ad_lb = new javax.swing.JLabel();
         Distancia_lb = new javax.swing.JLabel();
         Ciudad_lb = new javax.swing.JLabel();
-        Ciudad = new javax.swing.JLabel();
         Ciudad_ad_Título = new javax.swing.JLabel();
-        Ciudad_ad = new javax.swing.JLabel();
         Actualizar = new javax.swing.JButton();
         Distancia = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         Salida = new javax.swing.JButton();
         Regresar = new javax.swing.JButton();
+        Ciudad_Ad = new javax.swing.JTextField();
+        Ciudad = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Mostrar = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -58,29 +57,19 @@ public class Crear_Ciu extends javax.swing.JFrame {
 
         Ciudad_ad_lb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Ciudad_ad_lb.setText("Ciudad adyacente:");
-        jPanel1.add(Ciudad_ad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
+        jPanel1.add(Ciudad_ad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, -1));
 
         Distancia_lb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Distancia_lb.setText("Distancia:");
-        jPanel1.add(Distancia_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
+        jPanel1.add(Distancia_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, -1, -1));
 
         Ciudad_lb.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Ciudad_lb.setText("Número de ciudad:");
-        jPanel1.add(Ciudad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
-
-        Ciudad.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        Ciudad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad.setText("1");
-        jPanel1.add(Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 50, -1));
+        jPanel1.add(Ciudad_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, -1));
 
         Ciudad_ad_Título.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Ciudad_ad_Título.setText("Ciudades Adyacentes");
-        jPanel1.add(Ciudad_ad_Título, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, -1));
-
-        Ciudad_ad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Ciudad_ad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_ad.setText("0");
-        jPanel1.add(Ciudad_ad, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 30, -1));
+        jPanel1.add(Ciudad_ad_Título, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, -1, -1));
 
         Actualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Actualizar.setText("Crear");
@@ -97,11 +86,11 @@ public class Crear_Ciu extends javax.swing.JFrame {
                 DistanciaActionPerformed(evt);
             }
         });
-        jPanel1.add(Distancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 230, 70, -1));
+        jPanel1.add(Distancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 70, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setText("Crear ciudad");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
 
         Salida.setText("x");
         Salida.addActionListener(new java.awt.event.ActionListener() {
@@ -119,13 +108,65 @@ public class Crear_Ciu extends javax.swing.JFrame {
         });
         jPanel1.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 80, -1));
 
+        Ciudad_Ad.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Ciudad_Ad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Ciudad_AdActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Ciudad_Ad, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, -1, -1));
+        jPanel1.add(Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 140, 190, 40));
+
+        Mostrar.setColumns(20);
+        Mostrar.setRows(5);
+        Mostrar.setEnabled(false);
+        jScrollPane1.setViewportView(Mostrar);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 460, 290));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
-        
+        La_simulacion simulacion = Emulador.getSimulacion();
+        String ciudad = Ciudad.getText();
+        String ciudadAd = Ciudad_Ad.getText();
+        try{
+            double distancia = Double.parseDouble(Distancia.getText());
+            if(distancia > 0){
+                int similitud = 0;
+                for(int i = 0; i <simulacion.getColonia().getCant_ciudades(); i++ ){
+                    if(simulacion.getColonia().getCiudades()[i].getNombre().equals(ciudad)){
+                        similitud = 1;
+                    break;
+                    }
+                }
+                if(similitud == 1){
+                    simulacion.getColonia().Crear_Arista(ciudad, ciudadAd, distancia);
+                    Emulador.setSimulacion(simulacion);
+                    this.Actualizacion();
+                }else{
+                    simulacion.getColonia().CrearVetice(ciudad);
+                    simulacion.getColonia().Crear_Arista(ciudad, ciudadAd, distancia);
+                    Emulador.setSimulacion(simulacion);
+                    this.Actualizacion();
+                    if(simulacion.getColonia().getCant_ciudades()==20){
+                        this.setVisible(false);
+                        Menú ventana = new Menú();
+                        ventana.setVisible(true);
+                    }
+                }
+            
+            }
+            
+
+        }catch(Exception e){
+            String error = "\n\n              Ingresaste los datos incorrectos";
+            Error nuevo = new Error();
+            nuevo.RecibirAd(error);    
+        }
         
     }//GEN-LAST:event_ActualizarActionPerformed
 
@@ -142,6 +183,10 @@ public class Crear_Ciu extends javax.swing.JFrame {
         Menú ventana = new Menú();
         ventana.setVisible(true);
     }//GEN-LAST:event_RegresarActionPerformed
+
+    private void Ciudad_AdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ciudad_AdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Ciudad_AdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,16 +225,18 @@ public class Crear_Ciu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Actualizar;
-    private javax.swing.JLabel Ciudad;
-    private javax.swing.JLabel Ciudad_ad;
+    private javax.swing.JTextField Ciudad;
+    private javax.swing.JTextField Ciudad_Ad;
     private javax.swing.JLabel Ciudad_ad_Título;
     private javax.swing.JLabel Ciudad_ad_lb;
     private javax.swing.JLabel Ciudad_lb;
     private javax.swing.JTextField Distancia;
     private javax.swing.JLabel Distancia_lb;
+    private javax.swing.JTextArea Mostrar;
     private javax.swing.JButton Regresar;
     private javax.swing.JButton Salida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
