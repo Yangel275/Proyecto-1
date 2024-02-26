@@ -12,9 +12,12 @@ import Grafo.Vertice;
  */
 public class hormigas {
     hormiga[] hormigas;
+    private int cantidad;
     
-
+    
+    
     public void nuevo_Hormiguero(int numero_Hormigas, grafo ciudades){
+        this.setCantidad(numero_Hormigas);
         this.hormigas = new hormiga[numero_Hormigas];
         for(int i = 0; i < numero_Hormigas; i++){
             this.hormigas[i] = new hormiga();
@@ -24,6 +27,8 @@ public class hormigas {
             this.hormigas[i].actualizar_ciudades_no_visitados(ciudades_no_visitadas);
         }
     }
+
+    
     
     public String Imprimir(){
         String datos = "Las hormigas que hay son: \n";
@@ -31,6 +36,20 @@ public class hormigas {
             datos += this.hormigas[i].Imprimir();
         }
         return datos;
+    }
+
+    /**
+     * @return the cantidad
+     */
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    /**
+     * @param cantidad the cantidad to set
+     */
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 }
  

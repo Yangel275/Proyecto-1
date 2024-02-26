@@ -119,7 +119,7 @@ public class hormiga {
             datos += this.getCiudades_no_visitados()[i].Imprimmir()+"\n";
         datos += "Ciudades visitadas: ";
         Vertice[] nuevo =  this.getCiudades_visitadas();
-        if(nuevo.equals(null)){
+        if(nuevo == null){
             datos += "No se ha visitado ciudades\n";
             datos += "Distancia: "+ String.valueOf(this.getDistancia()) + "\n";
             return datos;

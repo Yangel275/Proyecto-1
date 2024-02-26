@@ -3,10 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interfaz;
-import Grafo.Arista;
-import Grafo.Lista;
-import Grafo.Vertice;
-import Grafo.grafo;     
+import Grafo.La_simulacion;
+
 
 /**
  *
@@ -16,52 +14,25 @@ public class Menú extends javax.swing.JFrame {
     /**
      * Creates new form Menú
      */
+    
     public Menú() {
-        initComponents();
-    }
+        initComponents();   
+    }    
     
-    public void inicio(){
-        grafo colonia = new grafo();
+    public void Actualizacion(){
+        La_simulacion simulacion = Emulador.getSimulacion();
         
-        colonia.setPrimero("1");
-        colonia.setUltimo("7");
-        
-        // Ciudad 1
-        colonia.CrearVetice("1");
-        colonia.Crear_Arista("1", "2", 5);
-        colonia.Crear_Arista("1", "3", 3.1);
-        colonia.Crear_Arista("1", "6", 5.2);
-        
-        // Ciudad 2
-        colonia.CrearVetice("2");
-        colonia.Crear_Arista("2", "7", 5.2);
-        
-        // Ciudad 3
-        colonia.CrearVetice("3");
-        colonia.Crear_Arista("3", "2", 4.9);
-        colonia.Crear_Arista("3", "7", 3);
-        colonia.Crear_Arista("3", "5", 6);
-        
-        //Ciudad 4
-        colonia.CrearVetice("4");
-        
-        //Ciudad 5
-        colonia.CrearVetice("5");
-        colonia.Crear_Arista("5", "4", 5.5);
+        Num_ciclos.setText(Integer.toString(simulacion.getCiclos()));
+        Num_ciudades.setText(Integer.toString(simulacion.getColonia().getCant_ciudades()));
+        Num_hormigas.setText(Integer.toString(simulacion.getHormiguero().getCantidad()));
+        Grado_v.setText(String.valueOf(simulacion.getVisibilidad_ciudad()));
+        Grado_f.setText(String.valueOf(simulacion.getImportancia_feromona()));
+        Evaporacion.setText(String.valueOf(simulacion.getFactor_evaporacion()));
+        Ciudad_In.setText(simulacion.getColonia().getPrimero());
+        Ciudad_Fin.setText(simulacion.getColonia().getUltimo());
         
         
-        //Ciudad 6 
-        colonia.CrearVetice("6");
-        colonia.Crear_Arista("6", "3", 3.2);
-        colonia.Crear_Arista("6", "5",4.7);
-        
-       
-        //Ciudad 7
-        colonia.CrearVetice("7");
-        colonia.Crear_Arista("7", "4", 4.8);
     }
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -86,7 +57,7 @@ public class Menú extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        Grado_fe_lb = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -99,11 +70,11 @@ public class Menú extends javax.swing.JFrame {
         jTextArea3 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
         Salir = new javax.swing.JButton();
-        Importancia = new javax.swing.JLabel();
+        Grado_f = new javax.swing.JLabel();
         Num_hormigas = new javax.swing.JLabel();
         Num_ciudades = new javax.swing.JLabel();
         Num_ciclos = new javax.swing.JLabel();
-        Visibilidad = new javax.swing.JLabel();
+        Grado_v = new javax.swing.JLabel();
         Evaporacion = new javax.swing.JLabel();
         Ciudad_In = new javax.swing.JLabel();
         Ciudad_Fin = new javax.swing.JLabel();
@@ -188,9 +159,9 @@ public class Menú extends javax.swing.JFrame {
         jLabel6.setText("- Grado de visibilidad:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 630, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setText("- Grado de feromonas: ");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 630, -1, -1));
+        Grado_fe_lb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Grado_fe_lb.setText("- Grado de feromonas: ");
+        getContentPane().add(Grado_fe_lb, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 630, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel8.setText("- Factor evaporación:");
@@ -241,10 +212,10 @@ public class Menú extends javax.swing.JFrame {
         });
         getContentPane().add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 80, -1));
 
-        Importancia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Importancia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Importancia.setText("0");
-        getContentPane().add(Importancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 630, 30, -1));
+        Grado_f.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Grado_f.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Grado_f.setText("0");
+        getContentPane().add(Grado_f, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 630, 30, -1));
 
         Num_hormigas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Num_hormigas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -261,10 +232,10 @@ public class Menú extends javax.swing.JFrame {
         Num_ciclos.setText("0");
         getContentPane().add(Num_ciclos, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 590, 30, -1));
 
-        Visibilidad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Visibilidad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Visibilidad.setText("0");
-        getContentPane().add(Visibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 30, -1));
+        Grado_v.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Grado_v.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Grado_v.setText("0");
+        getContentPane().add(Grado_v, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 30, -1));
 
         Evaporacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Evaporacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -354,14 +325,15 @@ public class Menú extends javax.swing.JFrame {
     private javax.swing.JLabel Ciudad_In;
     private javax.swing.JButton Eliminar_ciu;
     private javax.swing.JLabel Evaporacion;
+    private javax.swing.JLabel Grado_f;
+    private javax.swing.JLabel Grado_fe_lb;
+    private javax.swing.JLabel Grado_v;
     private javax.swing.JButton Guardar_gr;
-    private javax.swing.JLabel Importancia;
     private javax.swing.JLabel Num_ciclos;
     private javax.swing.JLabel Num_ciudades;
     private javax.swing.JLabel Num_hormigas;
     private javax.swing.JButton Salir;
     private javax.swing.JButton Simulación;
-    private javax.swing.JLabel Visibilidad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -371,7 +343,6 @@ public class Menú extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
