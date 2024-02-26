@@ -147,6 +147,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Guardar grafo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Guardar_grActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="240" y="620" width="230" height="-1"/>
@@ -298,6 +301,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="&#xa;&#xa;    Revisa las &#xfa;ltimas colonias &#xa;  realizadas  o  aprovecha de guardar &#xa;  lo ya hecho para futuros ingresos.&#xa;"/>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -332,6 +336,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="&#xa;         Crea o elimina ciudades para &#xa;  que rus simulaciones cambien de&#xa;  resultados:&#xa;              - Son m&#xe1;ximo 20 ciudades&#xa;              - Son m&#xed;nimo 4 ciudades"/>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -353,6 +358,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="      Incia el programa con la idea de comprobar el comportamiento de las &#xa;  hormigas, recuerda que antes de iniciar tienes que colocar:&#xa;           - Importancia de feromona&#xa;           - Grafo de visibilidad&#xa;           - Factor evaporaci&#xf3;n&#xa;           - N&#xfa;mero de hormigas&#xa;           - N&#xfa;mero de ciudades&#xa;           - N&#xfa;mero de ciclos&#xa;           - Ciudad de inicio&#xa;           - Ciudad de llegada"/>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -492,6 +498,19 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="1030" y="590" width="30" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="Predeterminado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cargar predeterminado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PredeterminadoActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="920" y="100" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

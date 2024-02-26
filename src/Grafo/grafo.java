@@ -22,7 +22,7 @@ public class grafo {
         this.ciudades = new Vertice[0];
     }
 
-    public void Crear_Arista(String ciudad,String destino, double distancia) {
+    public void Crear_Arista(String ciudad, double distancia, String destino) {
         boolean similitud = false;
         int ciudad_num = 0;
         for(int i = 0; i <this.getCiudades().length; i++){

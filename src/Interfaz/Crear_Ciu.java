@@ -144,12 +144,12 @@ public class Crear_Ciu extends javax.swing.JFrame {
                     }
                 }
                 if(similitud == 1){
-                    simulacion.getColonia().Crear_Arista(ciudad, ciudadAd, distancia);
+                    simulacion.getColonia().Crear_Arista(ciudad, distancia, ciudadAd);
                     Emulador.setSimulacion(simulacion);
                     this.Actualizacion();
                 }else{
                     simulacion.getColonia().CrearVetice(ciudad);
-                    simulacion.getColonia().Crear_Arista(ciudad, ciudadAd, distancia);
+                    simulacion.getColonia().Crear_Arista(ciudad, distancia, ciudadAd);
                     Emulador.setSimulacion(simulacion);
                     this.Actualizacion();
                     if(simulacion.getColonia().getCant_ciudades()==20){
